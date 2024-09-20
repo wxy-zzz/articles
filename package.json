@@ -1,0 +1,15 @@
+{
+  "name": "articles",
+  "version": "1.0.0",
+  "description": "<https://zenn.dev/> に投稿する記事の管理用 branch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zenn-cli": "^0.1.157"
+  }
+}
