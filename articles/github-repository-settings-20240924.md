@@ -3,7 +3,8 @@ title: "お気に入りの GitHub Repository Settings"
 emoji: "♥️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["GitHub"]
-published: false
+published: true
+published_at: 2024-09-24 12:00
 ---
 設定しては忘れ、設定しては忘れ、を繰り返しているので備忘録として。
 
