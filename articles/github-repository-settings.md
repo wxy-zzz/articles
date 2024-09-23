@@ -60,11 +60,25 @@ Pull Request の利用を前提とすると、Pull Request 単位の粒度の変
 
 # Rules - Rulesets
 
-# Actions - General
-<!-- Actions - Runners --><!-- Webhooks --><!-- Environments --><!-- Codespaces --><!-- Pages -->
-# Code security
-<!-- Deploy keys -->
-# Secrets and variables - Actions
-<!-- Secrets and variables - Codespaces -->
-# Secrets and variables - Dependabot
-<!-- GitHub Apps --><!-- Email notifications -->
+- `New ruleset` から `New branch ruleset`
+    <!-- Ruleset Name: `Default` とかでも -->
+    - Enforcement status: `Active`
+    <!-- Bypass list: `Add bypass` から `Repository admin` (`For pull requests only` にしておく) -->
+    - Targets
+        - `Add target` から `Include default branch`
+    - Rules
+        - Branch rules
+            <!-- Restrict creations --><!-- Restrict updates --><!-- Restrict deletions --><!-- Require linear history: squash merge を使うので細かいことを気にしなくてよさそう --><!-- Require deployments to succeed: deployment を使わない想定 --><!-- Require signed commits: 厳しすぎる気がする -->
+            - [x] Require a pull request before merging
+                - Required approvals: `1` 以上の数字に。
+                - [x] Dismiss stale pull request approvals when new commits are pushed
+                      Approve 後に変更されると困っちゃうので有効化。
+                <!-- Require review from Code Owners: 厳しすぎる気がする -->
+                - [x] Require approval of the most recent reviewable push
+                      最新の push はレビューされていて欲しいので有効化。 
+                <!-- Require conversation resolution before merging: 厳しすぎる気がする -->
+            - [ ] Require status checks to pass
+                  CI テストを作ってから設定。
+            <!-- Block force pushes --><!-- Require code scanning results: 後で調べる -->
+
+<!-- Actions - General: 後で調べる --><!-- Actions - Runners --><!-- Webhooks --><!-- Environments --><!-- Codespaces --><!-- Pages --><!-- Code security: 後で調べる --><!-- Deploy keys --><!-- Secrets and variables - Actions: 後から設定 --><!-- Secrets and variables - Codespaces --><!-- Secrets and variables - Dependabot --><!-- GitHub Apps --><!-- Email notifications -->
