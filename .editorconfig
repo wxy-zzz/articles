@@ -1,0 +1,8 @@
+root = true
+
+[*]
+trim_trailing_whitespace = true # 行末の空白を削除
+insert_final_newline = true # 最終行に改行を入れる
+
+[*.md]
+trim_trailing_whitespace = false
