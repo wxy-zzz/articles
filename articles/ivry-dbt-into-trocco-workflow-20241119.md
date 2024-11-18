@@ -3,7 +3,7 @@ title: "プロダクトへのデータ転送パイプラインに dbt を導入�
 emoji: "🔄"
 type: "tech"
 topics: ["dbt", "TROCCO",]
-published: false
+published: true
 published_at: 2024-11-19 12:00
 ---
 こんにちは。株式会社IVRy（アイブリー）のデータアナリストの [wada](https://note.com/wxy_zzz/n/nd1e905d15842) です。
