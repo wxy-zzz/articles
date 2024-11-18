@@ -16,7 +16,7 @@ IVRy ではデータモデルの管理のために [dbt Core](https://github.com
 
 https://ivry.jp
 
-プロダクトには、自動対応できた着電件数や IVRy を使うことによって効率化できた時間などの統計情報を確認できる機能があります。
+プロダクトには、自動対応した着電件数や IVRy を使うことによって削減した時間などの統計情報を確認できる機能があります。
 
 ![](https://images.microcms-assets.io/assets/e295270d0d5e4bd49109e816d1f8ddc4/3ad0de8f7ce6455b9a41723dd79470c5/yoha8.jpg)
 *[「台所ようは」様の導入事例](https://ivry.jp/case/daidocoro-yoha/)から*
