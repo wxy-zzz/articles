@@ -11,7 +11,7 @@ IVRy ではデータモデルの管理のために [dbt Core](https://github.com
 
 # プロダクトについて
 
-[IVRy](https://ivry.jp) は、電話業務を効率化する対話型音声 AI SaaS です。
+[IVRy](https://ivry.jp) は電話業務を効率化する対話型音声 AI SaaS です。
 
 https://ivry.jp
 
@@ -29,7 +29,7 @@ https://ivry.jp
 
 ## dbt 導入前 - 課題
 
-IVRy では解析用の各種データを BigQuery に集約しており、統計情報の元となる発着電イベントログも BigQuery に取り込んでいます。BigQuery 上の発着電イベントログから統計データを計算するクエリを実行し、その結果を定期的にプロダクトに転送するデータパイプラインを [TROCCO](https://trocco.io) を使って実現しています。
+IVRy では解析用の各種データを BigQuery に集約しており、統計情報の元となる発着電イベントログも BigQuery に取り込んでいます。BigQuery 上の発着電イベントログから統計データを計算し、その結果を定期的にプロダクトに転送するデータパイプラインを [TROCCO](https://trocco.io) を使って実現しています。
 
 ![](/images/ivry-dbt-into-trocco-workflow-20241119/before.png)
 *データの流れのイメージ（Before）*
