@@ -5,6 +5,7 @@ type: "tech"
 topics: ["dbt", "TROCCO",]
 published: true
 published_at: 2024-11-19 12:00
+publication_name: "ivry"
 ---
 こんにちは。株式会社IVRy（アイブリー）のデータアナリストの [wada](https://note.com/wxy_zzz/n/nd1e905d15842) です。
 IVRy ではデータモデルの管理のために [dbt Core](https://github.com/dbt-labs/dbt-core) を導入し始めているのですが、今回はプロダクトへのデータ転送パイプラインに dbt を導入した事例を紹介します。
