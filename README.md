@@ -10,3 +10,4 @@
 
 - [GitHubリポジトリでZennのコンテンツを管理する](https://zenn.dev/zenn/articles/connect-to-github)
 - [Zenn CLIをインストールする](https://zenn.dev/zenn/articles/install-zenn-cli)
+- [GitHubリポジトリ連携で画像をアップロードする方法](https://zenn.dev/zenn/articles/deploy-github-images)
