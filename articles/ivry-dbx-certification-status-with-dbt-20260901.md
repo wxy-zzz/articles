@@ -9,7 +9,15 @@ publication_name: "ivry"
 ---
 
 株式会社 IVRy のアナリティクスエンジニアの [wada](https://note.com/wxy_zzz/n/nd1e905d15842) です。
-今回は小ネタですが、[Databricks](https://www.databricks.com/jp) 上でデータの信頼性を示すための認定済みタグ（`Certification status system tag`）を dbt で管理してみた話です。
+小ネタ記事ですが、[Databricks](https://www.databricks.com/jp) 上でデータの信頼性を示すための認定済みタグ（`Certification status system tag`）を dbt で管理してみた話です。
+
+## 課題背景
+
+[Data + AI Summit 2026](https://www.databricks.com/dataaisummit) での発表で、Databricks の AI 機能は [Genie ファミリー](https://docs.databricks.com/aws/ja/genie/)として再編されました。これまで、例えば個別のダッシュボードなどに対応していた AI 機能の Genie Space は Genie Agent となりました。Genie One は Genie Agent を含めたワークスペース内のオブジェクトに網羅的にアクセス可能な、Databricks の入口となるような AI 機能になります。モバイルアプリも公開され、今後 Databricks は Genie One を起点としてより簡単にデータ活用が可能なデータ基盤へ進化していくでしょう。
+
+一方で、Genie One を十分に活用するためには、それを想定した対応が必要になります。例えば、ダッシュボードに対応する形で存在する Genie Space はそのダッシュボードに登録されたデータにしかアクセスできないため、ダッシュボードで取り扱うデータ、コンテキストに閉じられますが、Genie One はそうではなく、全てのオブジェクトを参照した回答が可能です。記事執筆時点での Databricks では、SQL エディタが使えるユーザは自由にダッシュボードを作ることが可能なため、様々な人が作ったオブジェクトがその参照先の一つになってしまいます。
+
+この状態ではどれが信頼度が高いデータでどれがそうではないかの判別が難しいため（勿論、Genie はアクセスの頻度やデータの作成者などを考慮してくれるようですが）、Genie One には、野良的に生まれたオブジェクトよりも優先的に使って欲しいデータを指定したくなります。
 
 ## 「認定済みタグ」とは
 
@@ -63,7 +71,7 @@ IVRy では [metric view](https://docs.databricks.com/aws/ja/uc-semantics/metric
 
 Databricks の認定済みタグを dbt で管理する方法についてまとめました。
 
-課題として、現時点での dbt-databricks アダプターの databricks_tags は付与はできるが削除ができない、というものがあるため、厳密に dbt 管理を続ける場合は post-hook などで対応する必要がありそうです。
+課題として、現時点での dbt-databricks アダプターの databricks_tags は付与はできるが削除ができない（dbt 側でタグ設定した後でその設定を削除しても、Databricks 上の実体からはタグが外れない）、というものがあるため、厳密に dbt 管理を続ける場合は post-hook などで対応する必要がありそうです。
 
 ## 最後に
 
